@@ -2,27 +2,87 @@
     "docs": [
         {
             "location": "/",
-            "text": "MKLorum\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
+            "text": "Project documentation\n\n\nThis site documents most project in my \nGitHub repository\n\n\nDeepLearning\n\n\np5.js examples\n\n\nTutorial\n\n\nProgramStructure\n\n\nCanvas\n\n\nLines\n\n\nShapes\n\n\nMouse\n\n\nSound\n\n\nProjects\n\n\n1. eyes\n\n\n2. Motion\n\n\n3. Music and Motion\n\n\n4. Generate Surface",
             "title": "Home"
         },
         {
-            "location": "/#mklorum",
-            "text": "For full documentation visit  mkdocs.org .",
-            "title": "MKLorum"
+            "location": "/#project-documentation",
+            "text": "This site documents most project in my  GitHub repository",
+            "title": "Project documentation"
         },
         {
-            "location": "/#commands",
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.",
-            "title": "Commands"
+            "location": "/#deeplearning",
+            "text": "",
+            "title": "DeepLearning"
         },
         {
-            "location": "/#project-layout",
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.",
-            "title": "Project layout"
+            "location": "/#p5js-examples",
+            "text": "",
+            "title": "p5.js examples"
+        },
+        {
+            "location": "/#tutorial",
+            "text": "",
+            "title": "Tutorial"
+        },
+        {
+            "location": "/#programstructure",
+            "text": "",
+            "title": "ProgramStructure"
+        },
+        {
+            "location": "/#canvas",
+            "text": "",
+            "title": "Canvas"
+        },
+        {
+            "location": "/#lines",
+            "text": "",
+            "title": "Lines"
+        },
+        {
+            "location": "/#shapes",
+            "text": "",
+            "title": "Shapes"
+        },
+        {
+            "location": "/#mouse",
+            "text": "",
+            "title": "Mouse"
+        },
+        {
+            "location": "/#sound",
+            "text": "",
+            "title": "Sound"
+        },
+        {
+            "location": "/#projects",
+            "text": "",
+            "title": "Projects"
+        },
+        {
+            "location": "/#1-eyes",
+            "text": "",
+            "title": "1. eyes"
+        },
+        {
+            "location": "/#2-motion",
+            "text": "",
+            "title": "2. Motion"
+        },
+        {
+            "location": "/#3-music-and-motion",
+            "text": "",
+            "title": "3. Music and Motion"
+        },
+        {
+            "location": "/#4-generate-surface",
+            "text": "",
+            "title": "4. Generate Surface"
         },
         {
             "location": "/about/",
-            "text": "About this site\n\n\nPurpose\n\n\nMain purpose of documeting the work is:\n\n to record what I learnt\n\n to refer my learnings\n* share it with larger community",
+            "text": "About this site\n\n\nPurpose\n\n\nMain purpose of documeting the work is:\n\n\n\n\n\n\nto record what I learnt\n\n\n\n\n\n\nto refer my learnings\n\n\n\n\n\n\nshare it with larger community",
             "title": "About"
         },
         {
@@ -32,7 +92,7 @@
         },
         {
             "location": "/about/#purpose",
-            "text": "Main purpose of documeting the work is:  to record what I learnt  to refer my learnings\n* share it with larger community",
+            "text": "Main purpose of documeting the work is:    to record what I learnt    to refer my learnings    share it with larger community",
             "title": "Purpose"
         }
     ]
