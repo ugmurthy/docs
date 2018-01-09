@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="./img/favicon.ico">
-  <title>Home - MKLorum</title>
+  <title>Home - Docs</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="./css/theme.css" type="text/css" />
@@ -35,7 +35,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> MKLorum</a>
+        <a href="." class="icon icon-home"> Docs</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -52,13 +52,13 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#mklorum">MKLorum</a></li>
+    <li class="toctree-l2"><a href="#project-documentation">Project documentation</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#commands">Commands</a></li>
+            <li><a class="toctree-l3" href="#deeplearning">DeepLearning</a></li>
         
-            <li><a class="toctree-l3" href="#project-layout">Project layout</a></li>
+            <li><a class="toctree-l3" href="#p5js-examples">p5.js examples</a></li>
         
         </ul>
     
@@ -81,7 +81,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">MKLorum</a>
+        <a href=".">Docs</a>
       </nav>
 
       
@@ -103,21 +103,78 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="mklorum">MKLorum</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+                <h1 id="project-documentation">Project documentation</h1>
+<p>This site documents most project in my <a href="https://github.com/ugmurthy">GitHub repository</a></p>
+<h2 id="deeplearning">DeepLearning</h2>
+<h2 id="p5js-examples">p5.js examples</h2>
+<h3 id="tutorial">Tutorial</h3>
+<p>This Tutorial on p5.js will be based on <strong>short code</strong> snippets with explanations in the comments section of the code.
+  The basic idea is to get you started quickly. The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit <a href="https://p5js.org/">p5.js</a> for details</p>
+<p>if you do not want to install p5.js but want to quickly try things our then here is an <a href="http://alpha.editor.p5js.org/">online editor/previewer</a>.</p>
+<p>Have fun....</p>
+<h4 id="program-structure">Program Structure</h4>
+<pre><code class="javascript">  var x=0  // global variables
+
+  function setup () {
+    // runs once during the lifetime of this script
+  }
+
+  function draw () {
+    // called 60 time every second by default
+
+  }
 </code></pre>
+
+<p>Try this</p>
+<pre><code class="javascript">var bg=0  // global variables
+var inc=1 // increment
+function setup () {
+  // create a canvas 400 pixels by 400 pixels
+  createCanvas(400,400)
+}
+
+// called 60 time every second by default
+function draw () {
+  background(bg) // draw a background with grey shade indicated by bg
+  bg = bg+inc    // increment bg by 1 every 1/60 of a second
+
+  // ensure bg value oscillates between 0 and 255
+  if (bg &gt; 255) {
+        inc = -1
+        bg=255
+    }
+
+    if (bg &lt; 0) {
+        inc=1
+        bg=0
+    }
+}
+</code></pre>
+
+<p>what you will notice is the that the <strong>background</strong> color of the <strong>canvas</strong> goes from white to black and black to white indefintely</p>
+<h4 id="canvas">Canvas</h4>
+<p>The <em>canvas</em> is where the <code>draw()</code> draws and is created by <code>createCanvas(w,h,[renderer])</code> function the renderer by default is <em>P2D</em>, other options being <em>WEBGL</em> in case you are interested is drawing 3d shapes. Read more about the <a href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">WEBGL here</a></p>
+<p>Top left corner in the Canvas is <code>(0,0)</code> x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.</p>
+<p><strong>need a small diagram here</strong></p>
+<h4 id="lines">Lines</h4>
+<p>Lets draw a line connecting two points <code>(a,b)</code> and <code>(c,d)</code> - <code>line(a,b,c,d)</code></p>
+<pre><code class="javascript">function setup() {
+  createCanvas(400,400)
+}
+
+function draw() {
+  line(10,10,100,150)
+}
+</code></pre>
+
+<h4 id="shapes">Shapes</h4>
+<h4 id="mouse">Mouse</h4>
+<h4 id="sound">Sound</h4>
+<h3 id="projects">Projects</h3>
+<h4 id="1-eyes">1. eyes</h4>
+<h4 id="2-motion">2. Motion</h4>
+<h4 id="3-music-and-motion">3. Music and Motion</h4>
+<h4 id="4-generate-surface">4. Generate Surface</h4>
               
             </div>
           </div>
@@ -167,5 +224,5 @@ docs/
 
 <!--
 MkDocs version : 0.17.2
-Build Date UTC : 2018-01-08 10:57:05
+Build Date UTC : 2018-01-09 08:31:06
 -->
