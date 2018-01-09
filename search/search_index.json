@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Project documentation\n\n\nThis site documents most project in my \nGitHub repository\n\n\nDeepLearning\n\n\np5.js examples\n\n\nTutorial\n\n\nProgramStructure\n\n\nCanvas\n\n\nLines\n\n\nShapes\n\n\nMouse\n\n\nSound\n\n\nProjects\n\n\n1. eyes\n\n\n2. Motion\n\n\n3. Music and Motion\n\n\n4. Generate Surface",
+            "text": "Project documentation\n\n\nThis site documents most project in my \nGitHub repository\n\n\nDeepLearning\n\n\np5.js examples\n\n\nTutorial\n\n\nThis Tutorial on p5.js will be based on \nshort code\n snippets with explanations in the comments section of the code.\n  The basic idea is to get you started quickly. The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit \np5.js\n for details\n\n\nif you do not want to install p5.js but want to quickly try things our then here is an \nonline editor/previewer\n.\n\n\nHave fun....\n\n\nProgram Structure\n\n\n  var x=0  // global variables\n\n  function setup () {\n    // runs once during the lifetime of this script\n  }\n\n  function draw () {\n    // called 60 time every second by default\n\n  }\n\n\n\n\nTry this\n\n\nvar bg=0  // global variables\nvar inc=1 // increment\nfunction setup () {\n  // create a canvas 400 pixels by 400 pixels\n  createCanvas(400,400)\n}\n\n// called 60 time every second by default\nfunction draw () {\n  background(bg) // draw a background with grey shade indicated by bg\n  bg = bg+inc    // increment bg by 1 every 1/60 of a second\n\n  // ensure bg value oscillates between 0 and 255\n  if (bg > 255) {\n        inc = -1\n        bg=255\n    }\n\n    if (bg < 0) {\n        inc=1\n        bg=0\n    }\n}\n\n\n\n\nwhat you will notice is the that the \nbackground\n color of the \ncanvas\n goes from white to black and black to white indefintely\n\n\nCanvas\n\n\nThe \ncanvas\n is where the \ndraw()\n draws and is created by \ncreateCanvas(w,h,[renderer])\n function the renderer by default is \nP2D\n, other options being \nWEBGL\n in case you are interested is drawing 3d shapes. Read more about the \nWEBGL here\n\n\nTop left corner in the Canvas is \n(0,0)\n x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.\n\n\nneed a small diagram here\n\n\nLines\n\n\nLets draw a line connecting two points \n(a,b)\n and \n(c,d)\n - \nline(a,b,c,d)\n\n\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(10,10,100,150)\n}\n\n\n\n\nShapes\n\n\nMouse\n\n\nSound\n\n\nProjects\n\n\n1. eyes\n\n\n2. Motion\n\n\n3. Music and Motion\n\n\n4. Generate Surface",
             "title": "Home"
         },
         {
@@ -22,22 +22,22 @@
         },
         {
             "location": "/#tutorial",
-            "text": "",
+            "text": "This Tutorial on p5.js will be based on  short code  snippets with explanations in the comments section of the code.\n  The basic idea is to get you started quickly. The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit  p5.js  for details  if you do not want to install p5.js but want to quickly try things our then here is an  online editor/previewer .  Have fun....",
             "title": "Tutorial"
         },
         {
-            "location": "/#programstructure",
-            "text": "",
-            "title": "ProgramStructure"
+            "location": "/#program-structure",
+            "text": "var x=0  // global variables\n\n  function setup () {\n    // runs once during the lifetime of this script\n  }\n\n  function draw () {\n    // called 60 time every second by default\n\n  }  Try this  var bg=0  // global variables\nvar inc=1 // increment\nfunction setup () {\n  // create a canvas 400 pixels by 400 pixels\n  createCanvas(400,400)\n}\n\n// called 60 time every second by default\nfunction draw () {\n  background(bg) // draw a background with grey shade indicated by bg\n  bg = bg+inc    // increment bg by 1 every 1/60 of a second\n\n  // ensure bg value oscillates between 0 and 255\n  if (bg > 255) {\n        inc = -1\n        bg=255\n    }\n\n    if (bg < 0) {\n        inc=1\n        bg=0\n    }\n}  what you will notice is the that the  background  color of the  canvas  goes from white to black and black to white indefintely",
+            "title": "Program Structure"
         },
         {
             "location": "/#canvas",
-            "text": "",
+            "text": "The  canvas  is where the  draw()  draws and is created by  createCanvas(w,h,[renderer])  function the renderer by default is  P2D , other options being  WEBGL  in case you are interested is drawing 3d shapes. Read more about the  WEBGL here  Top left corner in the Canvas is  (0,0)  x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.  need a small diagram here",
             "title": "Canvas"
         },
         {
             "location": "/#lines",
-            "text": "",
+            "text": "Lets draw a line connecting two points  (a,b)  and  (c,d)  -  line(a,b,c,d)  function setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(10,10,100,150)\n}",
             "title": "Lines"
         },
         {
