@@ -1,5 +1,8 @@
 site_name: Docs
 pages:
    - Home: index.md
+   - p5.js: p5js.md
+   - DeepLearing: dl4cv.md
    - About: about.md
+
 theme: readthedocs
