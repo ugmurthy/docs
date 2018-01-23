@@ -52,13 +52,13 @@
     <a class="current" href=".">Home</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#project-documentation">Project documentation</a></li>
+    <li class="toctree-l2"><a href="#p5js">p5.js</a></li>
     
         <ul>
         
-            <li><a class="toctree-l3" href="#deeplearning">DeepLearning</a></li>
+            <li><a class="toctree-l3" href="#p5js-tutorial">p5.js Tutorial</a></li>
         
-            <li><a class="toctree-l3" href="#p5js-examples">p5.js examples</a></li>
+            <li><a class="toctree-l3" href="#projects">Projects</a></li>
         
         </ul>
     
@@ -103,13 +103,11 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="project-documentation">Project documentation</h1>
-<p>This site documents most project in my <a href="https://github.com/ugmurthy">GitHub repository</a></p>
-<h2 id="deeplearning">DeepLearning</h2>
-<h2 id="p5js-examples">p5.js examples</h2>
-<h3 id="tutorial">Tutorial</h3>
-<p>This Tutorial on p5.js will be based on <strong>short code</strong> snippets with explanations in the comments section of the code.
-  The basic idea is to get you started quickly. The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit <a href="https://p5js.org/">p5.js</a> for details</p>
+                <h2 id="p5js">p5.js</h2>
+<p><strong>p5.js</strong> is a javascript library to make coding accessible for artists, designers, educators and beginners.</p>
+<h3 id="p5js-tutorial">p5.js Tutorial</h3>
+<p>This tutorial is an attempt to give a quick inroduction to <strong>p5.js</strong> and consists of <strong>short code</strong> snippets with explanations in the comments section of the code.</p>
+<p>The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit <a href="https://p5js.org/">p5.js</a> in case you need installation details.</p>
 <p>if you do not want to install p5.js but want to quickly try things our then here is an <a href="http://alpha.editor.p5js.org/">online editor/previewer</a>.</p>
 <p>Have fun....</p>
 <h4 id="program-structure">Program Structure</h4>
@@ -157,18 +155,70 @@ function draw () {
 <p>Top left corner in the Canvas is <code>(0,0)</code> x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.</p>
 <p><strong>need a small diagram here</strong></p>
 <h4 id="lines">Lines</h4>
-<p>Lets draw a line connecting two points <code>(a,b)</code> and <code>(c,d)</code> - <code>line(a,b,c,d)</code></p>
+<p>Drawing lines is simple. All you need is two points
+ <code>(a,b)</code> and <code>(c,d)</code>. Using <code>line(a,b,c,d)</code> we will get a line connecting the two point.</p>
+<pre><code class="javascript">function setup() {
+  createCanvas(400,400)
+}
+
+function draw() {
+  line(x,10,100,150)
+}
+</code></pre>
+
+<h4 id="shapes">Shapes</h4>
+<p>One can also draw common shapes like ellipse, rectangle, triangle etc. see <a href="https://p5js.org/reference/">p5 Reference</a> for more shapes</p>
+<p>here is an example:</p>
 <pre><code class="javascript">function setup() {
   createCanvas(400,400)
 }
 
 function draw() {
   line(10,10,100,150)
+
+  // given top left corner and width and height
+  // draw a rectangle
+  rect(10,10,100,100)
+
+  // given a center point and width and height of
+  // horizontal and vertical axis - draw a ellipse
+  // if widht=height you get a circle
+
+  ellipse(20,20,10,100)
+  ellipse(10,100,50,50)
 }
 </code></pre>
 
-<h4 id="shapes">Shapes</h4>
 <h4 id="mouse">Mouse</h4>
+<p>Its possible to use mouse events and position to manipulate the graphics. <code>mouseX</code> and <code>mouseY</code> always refer to current mouse position.</p>
+<p>The <code>mousePressed()</code> is called when mouse is pressed and the code here  will modify the position of ellipse being drawn.</p>
+<pre><code class="javascript">// let cx,cy be the position of center of ellipse
+var cx=100
+var cy=100
+function setup() {
+  createCanvas(400,400)
+}
+
+function draw() {
+
+  // draw background of white every time draw is called
+  // by doing this you will see only one ellipse
+  // try running this script without background(255)
+  background(255)
+  // given a center point and width and height of
+  // horizontal and vertical axis - draw a ellipse
+  // if widht=height you get a circle
+
+  ellipse(cx,cy,mouseX,mouseY)
+}
+
+// when mouse is pressed update center co-ordinates
+function mousePressed() {
+  cx = mouseX
+  cy = mouseY
+}
+</code></pre>
+
 <h4 id="sound">Sound</h4>
 <h3 id="projects">Projects</h3>
 <h4 id="1-eyes">1. eyes</h4>
@@ -224,5 +274,5 @@ function draw() {
 
 <!--
 MkDocs version : 0.17.2
-Build Date UTC : 2018-01-09 08:31:55
+Build Date UTC : 2018-01-23 04:42:43
 -->
