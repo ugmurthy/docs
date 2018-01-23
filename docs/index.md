@@ -1,15 +1,12 @@
-# Project documentation
-
-This site documents most project in my [GitHub repository](https://github.com/ugmurthy)
-
-## DeepLearning
 
 
-## p5.js examples
+## p5.js
+**p5.js** is a javascript library to make coding accessible for artists, designers, educators and beginners.
 
-### Tutorial
-  This Tutorial on p5.js will be based on **short code** snippets with explanations in the comments section of the code.
-  The basic idea is to get you started quickly. The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit [p5.js](https://p5js.org/) for details
+### p5.js Tutorial
+  This tutorial is an attempt to give a quick inroduction to **p5.js** and consists of **short code** snippets with explanations in the comments section of the code.
+
+  The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit [p5.js](https://p5js.org/) in case you need installation details.
 
   if you do not want to install p5.js but want to quickly try things our then here is an [online editor/previewer](http://alpha.editor.p5js.org/).
 
@@ -68,7 +65,23 @@ Top left corner in the Canvas is `(0,0)` x-Axis runs from 0 on the left to posit
 
 #### Lines
 
-Lets draw a line connecting two points `(a,b)` and `(c,d)` - `line(a,b,c,d)`
+Drawing lines is simple. All you need is two points
+ `(a,b)` and `(c,d)`. Using `line(a,b,c,d)` we will get a line connecting the two point.
+```javascript
+function setup() {
+  createCanvas(400,400)
+}
+
+function draw() {
+  line(x,10,100,150)
+}
+```
+#### Shapes
+
+One can also draw common shapes like ellipse, rectangle, triangle etc. see [p5 Reference](https://p5js.org/reference/) for more shapes
+
+here is an example:
+
 ```javascript
 function setup() {
   createCanvas(400,400)
@@ -76,10 +89,54 @@ function setup() {
 
 function draw() {
   line(10,10,100,150)
+
+  // given top left corner and width and height
+  // draw a rectangle
+  rect(10,10,100,100)
+
+  // given a center point and width and height of
+  // horizontal and vertical axis - draw a ellipse
+  // if widht=height you get a circle
+
+  ellipse(20,20,10,100)
+  ellipse(10,100,50,50)
 }
 ```
-#### Shapes
+
+
 #### Mouse
+
+Its possible to use mouse events and position to manipulate the graphics. `mouseX` and `mouseY` always refer to current mouse position.
+
+The `mousePressed()` is called when mouse is pressed and the code here  will modify the position of ellipse being drawn.
+
+```javascript
+// let cx,cy be the position of center of ellipse
+var cx=100
+var cy=100
+function setup() {
+  createCanvas(400,400)
+}
+
+function draw() {
+
+  // draw background of white every time draw is called
+  // by doing this you will see only one ellipse
+  // try running this script without background(255)
+  background(255)
+  // given a center point and width and height of
+  // horizontal and vertical axis - draw a ellipse
+  // if widht=height you get a circle
+
+  ellipse(cx,cy,mouseX,mouseY)
+}
+
+// when mouse is pressed update center co-ordinates
+function mousePressed() {
+  cx = mouseX
+  cy = mouseY
+}
+```
 #### Sound
 
 ### Projects
