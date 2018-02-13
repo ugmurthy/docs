@@ -11,6 +11,22 @@
 
     
     <url>
+     <loc>/p5js/</loc>
+     <lastmod>2018-01-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/dl4cv/</loc>
+     <lastmod>2018-01-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/about/</loc>
      <lastmod>2018-01-23</lastmod>
      <changefreq>daily</changefreq>

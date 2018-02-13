@@ -2,73 +2,83 @@
     "docs": [
         {
             "location": "/",
-            "text": "p5.js\n\n\np5.js\n is a javascript library to make coding accessible for artists, designers, educators and beginners.\n\n\np5.js Tutorial\n\n\nThis tutorial is an attempt to give a quick inroduction to \np5.js\n and consists of \nshort code\n snippets with explanations in the comments section of the code.\n\n\nThe Tutorial assumes you have installed or have access to the necessary p5.js files. Visit \np5.js\n in case you need installation details.\n\n\nif you do not want to install p5.js but want to quickly try things our then here is an \nonline editor/previewer\n.\n\n\nHave fun....\n\n\nProgram Structure\n\n\n  var x=0  // global variables\n\n  function setup () {\n    // runs once during the lifetime of this script\n  }\n\n  function draw () {\n    // called 60 time every second by default\n\n  }\n\n\n\n\nTry this\n\n\nvar bg=0  // global variables\nvar inc=1 // increment\nfunction setup () {\n  // create a canvas 400 pixels by 400 pixels\n  createCanvas(400,400)\n}\n\n// called 60 time every second by default\nfunction draw () {\n  background(bg) // draw a background with grey shade indicated by bg\n  bg = bg+inc    // increment bg by 1 every 1/60 of a second\n\n  // ensure bg value oscillates between 0 and 255\n  if (bg > 255) {\n        inc = -1\n        bg=255\n    }\n\n    if (bg < 0) {\n        inc=1\n        bg=0\n    }\n}\n\n\n\n\nwhat you will notice is the that the \nbackground\n color of the \ncanvas\n goes from white to black and black to white indefintely\n\n\nCanvas\n\n\nThe \ncanvas\n is where the \ndraw()\n draws and is created by \ncreateCanvas(w,h,[renderer])\n function the renderer by default is \nP2D\n, other options being \nWEBGL\n in case you are interested is drawing 3d shapes. Read more about the \nWEBGL here\n\n\nTop left corner in the Canvas is \n(0,0)\n x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.\n\n\nneed a small diagram here\n\n\nLines\n\n\nDrawing lines is simple. All you need is two points\n \n(a,b)\n and \n(c,d)\n. Using \nline(a,b,c,d)\n we will get a line connecting the two point.\n\n\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(x,10,100,150)\n}\n\n\n\n\nShapes\n\n\nOne can also draw common shapes like ellipse, rectangle, triangle etc. see \np5 Reference\n for more shapes\n\n\nhere is an example:\n\n\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(10,10,100,150)\n\n  // given top left corner and width and height\n  // draw a rectangle\n  rect(10,10,100,100)\n\n  // given a center point and width and height of\n  // horizontal and vertical axis - draw a ellipse\n  // if widht=height you get a circle\n\n  ellipse(20,20,10,100)\n  ellipse(10,100,50,50)\n}\n\n\n\n\nMouse\n\n\nIts possible to use mouse events and position to manipulate the graphics. \nmouseX\n and \nmouseY\n always refer to current mouse position.\n\n\nThe \nmousePressed()\n is called when mouse is pressed and the code here  will modify the position of ellipse being drawn.\n\n\n// let cx,cy be the position of center of ellipse\nvar cx=100\nvar cy=100\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n\n  // draw background of white every time draw is called\n  // by doing this you will see only one ellipse\n  // try running this script without background(255)\n  background(255)\n  // given a center point and width and height of\n  // horizontal and vertical axis - draw a ellipse\n  // if widht=height you get a circle\n\n  ellipse(cx,cy,mouseX,mouseY)\n}\n\n// when mouse is pressed update center co-ordinates\nfunction mousePressed() {\n  cx = mouseX\n  cy = mouseY\n}\n\n\n\n\nSound\n\n\nProjects\n\n\n1. eyes\n\n\n2. Motion\n\n\n3. Music and Motion\n\n\n4. Generate Surface",
+            "text": "",
             "title": "Home"
         },
         {
-            "location": "/#p5js",
+            "location": "/p5js/",
+            "text": "p5.js\n\n\np5.js\n is a javascript library to make coding accessible for artists, designers, educators and beginners.\n\n\np5.js Tutorial\n\n\nThis tutorial is an attempt to give a quick inroduction to \np5.js\n and consists of \nshort code\n snippets with explanations in the comments section of the code.\n\n\nThe Tutorial assumes you have installed or have access to the necessary p5.js files. Visit \np5.js\n in case you need installation details.\n\n\nif you do not want to install p5.js but want to quickly try things our then here is an \nonline editor/previewer\n.\n\n\nHave fun....\n\n\nProgram Structure\n\n\n  var x=0  // global variables\n\n  function setup () {\n    // runs once during the lifetime of this script\n  }\n\n  function draw () {\n    // called 60 time every second by default\n\n  }\n\n\n\n\nTry this\n\n\nvar bg=0  // global variables\nvar inc=1 // increment\nfunction setup () {\n  // create a canvas 400 pixels by 400 pixels\n  createCanvas(400,400)\n}\n\n// called 60 time every second by default\nfunction draw () {\n  background(bg) // draw a background with grey shade indicated by bg\n  bg = bg+inc    // increment bg by 1 every 1/60 of a second\n\n  // ensure bg value oscillates between 0 and 255\n  if (bg > 255) {\n        inc = -1\n        bg=255\n    }\n\n    if (bg < 0) {\n        inc=1\n        bg=0\n    }\n}\n\n\n\n\nwhat you will notice is the that the \nbackground\n color of the \ncanvas\n goes from white to black and black to white indefintely\n\n\nCanvas\n\n\nThe \ncanvas\n is where the \ndraw()\n draws and is created by \ncreateCanvas(w,h,[renderer])\n function the renderer by default is \nP2D\n, other options being \nWEBGL\n in case you are interested is drawing 3d shapes. Read more about the \nWEBGL here\n\n\nTop left corner in the Canvas is \n(0,0)\n x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.\n\n\nneed a small diagram here\n\n\nLines\n\n\nDrawing lines is simple. All you need is two points\n \n(a,b)\n and \n(c,d)\n. Using \nline(a,b,c,d)\n we will get a line connecting the two point.\n\n\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(x,10,100,150)\n}\n\n\n\n\nShapes\n\n\nOne can also draw common shapes like ellipse, rectangle, triangle etc. see \np5 Reference\n for more shapes\n\n\nhere is an example:\n\n\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(10,10,100,150)\n\n  // given top left corner and width and height\n  // draw a rectangle\n  rect(10,10,100,100)\n\n  // given a center point and width and height of\n  // horizontal and vertical axis - draw a ellipse\n  // if widht=height you get a circle\n\n  ellipse(20,20,10,100)\n  ellipse(10,100,50,50)\n}\n\n\n\n\nMouse\n\n\nIts possible to use mouse events and position to manipulate the graphics. \nmouseX\n and \nmouseY\n always refer to current mouse position.\n\n\nThe \nmousePressed()\n is called when mouse is pressed and the code here  will modify the position of ellipse being drawn.\n\n\n// let cx,cy be the position of center of ellipse\nvar cx=100\nvar cy=100\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n\n  // draw background of white every time draw is called\n  // by doing this you will see only one ellipse\n  // try running this script without background(255)\n  background(255)\n  // given a center point and width and height of\n  // horizontal and vertical axis - draw a ellipse\n  // if widht=height you get a circle\n\n  ellipse(cx,cy,mouseX,mouseY)\n}\n\n// when mouse is pressed update center co-ordinates\nfunction mousePressed() {\n  cx = mouseX\n  cy = mouseY\n}\n\n\n\n\nSound\n\n\nProjects\n\n\n1. eyes\n\n\n2. Motion\n\n\n3. Music and Motion\n\n\n4. Generate Surface",
+            "title": "p5.js"
+        },
+        {
+            "location": "/p5js/#p5js",
             "text": "p5.js  is a javascript library to make coding accessible for artists, designers, educators and beginners.",
             "title": "p5.js"
         },
         {
-            "location": "/#p5js-tutorial",
+            "location": "/p5js/#p5js-tutorial",
             "text": "This tutorial is an attempt to give a quick inroduction to  p5.js  and consists of  short code  snippets with explanations in the comments section of the code.  The Tutorial assumes you have installed or have access to the necessary p5.js files. Visit  p5.js  in case you need installation details.  if you do not want to install p5.js but want to quickly try things our then here is an  online editor/previewer .  Have fun....",
             "title": "p5.js Tutorial"
         },
         {
-            "location": "/#program-structure",
+            "location": "/p5js/#program-structure",
             "text": "var x=0  // global variables\n\n  function setup () {\n    // runs once during the lifetime of this script\n  }\n\n  function draw () {\n    // called 60 time every second by default\n\n  }  Try this  var bg=0  // global variables\nvar inc=1 // increment\nfunction setup () {\n  // create a canvas 400 pixels by 400 pixels\n  createCanvas(400,400)\n}\n\n// called 60 time every second by default\nfunction draw () {\n  background(bg) // draw a background with grey shade indicated by bg\n  bg = bg+inc    // increment bg by 1 every 1/60 of a second\n\n  // ensure bg value oscillates between 0 and 255\n  if (bg > 255) {\n        inc = -1\n        bg=255\n    }\n\n    if (bg < 0) {\n        inc=1\n        bg=0\n    }\n}  what you will notice is the that the  background  color of the  canvas  goes from white to black and black to white indefintely",
             "title": "Program Structure"
         },
         {
-            "location": "/#canvas",
+            "location": "/p5js/#canvas",
             "text": "The  canvas  is where the  draw()  draws and is created by  createCanvas(w,h,[renderer])  function the renderer by default is  P2D , other options being  WEBGL  in case you are interested is drawing 3d shapes. Read more about the  WEBGL here  Top left corner in the Canvas is  (0,0)  x-Axis runs from 0 on the left to positive numbers on the right, whereas the y-Axis starts with 0 on the top with positive numbers along y-Axis going down.  need a small diagram here",
             "title": "Canvas"
         },
         {
-            "location": "/#lines",
+            "location": "/p5js/#lines",
             "text": "Drawing lines is simple. All you need is two points\n  (a,b)  and  (c,d) . Using  line(a,b,c,d)  we will get a line connecting the two point.  function setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(x,10,100,150)\n}",
             "title": "Lines"
         },
         {
-            "location": "/#shapes",
+            "location": "/p5js/#shapes",
             "text": "One can also draw common shapes like ellipse, rectangle, triangle etc. see  p5 Reference  for more shapes  here is an example:  function setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n  line(10,10,100,150)\n\n  // given top left corner and width and height\n  // draw a rectangle\n  rect(10,10,100,100)\n\n  // given a center point and width and height of\n  // horizontal and vertical axis - draw a ellipse\n  // if widht=height you get a circle\n\n  ellipse(20,20,10,100)\n  ellipse(10,100,50,50)\n}",
             "title": "Shapes"
         },
         {
-            "location": "/#mouse",
+            "location": "/p5js/#mouse",
             "text": "Its possible to use mouse events and position to manipulate the graphics.  mouseX  and  mouseY  always refer to current mouse position.  The  mousePressed()  is called when mouse is pressed and the code here  will modify the position of ellipse being drawn.  // let cx,cy be the position of center of ellipse\nvar cx=100\nvar cy=100\nfunction setup() {\n  createCanvas(400,400)\n}\n\nfunction draw() {\n\n  // draw background of white every time draw is called\n  // by doing this you will see only one ellipse\n  // try running this script without background(255)\n  background(255)\n  // given a center point and width and height of\n  // horizontal and vertical axis - draw a ellipse\n  // if widht=height you get a circle\n\n  ellipse(cx,cy,mouseX,mouseY)\n}\n\n// when mouse is pressed update center co-ordinates\nfunction mousePressed() {\n  cx = mouseX\n  cy = mouseY\n}",
             "title": "Mouse"
         },
         {
-            "location": "/#sound",
+            "location": "/p5js/#sound",
             "text": "",
             "title": "Sound"
         },
         {
-            "location": "/#projects",
+            "location": "/p5js/#projects",
             "text": "",
             "title": "Projects"
         },
         {
-            "location": "/#1-eyes",
+            "location": "/p5js/#1-eyes",
             "text": "",
             "title": "1. eyes"
         },
         {
-            "location": "/#2-motion",
+            "location": "/p5js/#2-motion",
             "text": "",
             "title": "2. Motion"
         },
         {
-            "location": "/#3-music-and-motion",
+            "location": "/p5js/#3-music-and-motion",
             "text": "",
             "title": "3. Music and Motion"
         },
         {
-            "location": "/#4-generate-surface",
+            "location": "/p5js/#4-generate-surface",
             "text": "",
             "title": "4. Generate Surface"
+        },
+        {
+            "location": "/dl4cv/",
+            "text": "",
+            "title": "DeepLearing"
         },
         {
             "location": "/about/",
